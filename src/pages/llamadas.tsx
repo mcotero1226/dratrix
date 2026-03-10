@@ -19,7 +19,7 @@ const Llamadas = () => {
     queryFn: dataLlamadas
   })
 
-  const deleteLlamadas = async (id:any) => {
+  const deleteLlamadas = async (id: any) => {
     const res = await fetch(`http://localhost:3001/calls/${id}`, {
       method: "DELETE",
     })
@@ -46,11 +46,11 @@ const Llamadas = () => {
 
       <div className="grid md:grid-cols-3 gap-6">
 
-        {llamadas.map((i:any) => (
+        {llamadas.map((i: any) => (
 
           <Card key={i.id} className="shadow-lg rounded-xl">
 
-            <div className="flex items-center gap-4">
+            <div className="items-center gap-4">
 
               <Avatar size={50}>
                 {i.name[0]}
@@ -63,8 +63,7 @@ const Llamadas = () => {
 
             </div>
 
-            <div className="flex justify-between mt-4 items-center">
-
+            <div className="flex justify-between mt-[-110px] items-center">
               <Tag color="blue" icon={<PhoneOutlined />}>
                 {i.type}
               </Tag>
@@ -72,16 +71,14 @@ const Llamadas = () => {
               <span className="text-gray-400 text-sm">
                 {i.duration}
               </span>
-
-            </div>
-
-            <div className="mt-4">
               <MyButton
                 text="primary"
                 significado="borrar"
                 onClick={() => mutation.mutate(i.id)}
               />
+
             </div>
+
 
           </Card>
 
