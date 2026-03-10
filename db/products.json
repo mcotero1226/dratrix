@@ -1,0 +1,362 @@
+{
+  "products": [
+    {
+      "id": "3",
+      "name": "Mateo cardenas",
+      "description": "chico hermoso",
+      "price": 950000,
+      "stock": 8,
+      "categoryId": 2,
+      "brand": "ViewMax",
+      "rating": 4.8,
+      "status": "inactive",
+      "ig": "https://www.instagram.com/c.ardenas0/"
+    },
+    {
+      "id": "5",
+      "name": "estiven Cárdenas ",
+      "description": "HAYYY YAAAA",
+      "price": 210000,
+      "stock": 12,
+      "categoryId": 1,
+      "brand": "KeyPro",
+      "rating": 4.4,
+      "status": "active",
+      "ig": "https://www.instagram.com/e.cardenas10/ "
+    },
+    {
+      "id": "6",
+      "name": "Daniel Hernandes",
+      "description": "un feo hp,JAJJAA MENTIRAS A MANO ",
+      "price": 85000,
+      "stock": 50,
+      "categoryId": 1,
+      "brand": "GripZone",
+      "rating": 4.3,
+      "status": "active",
+      "ig": "https://www.instagram.com/danielhz.p/"
+    },
+    {
+      "id": "a638",
+      "name": "Manuela lopez",
+      "description": "mama huevo",
+      "ig": ""
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Accesorios"
+    },
+    {
+      "id": "2",
+      "name": "Monitores"
+    },
+    {
+      "id": "3",
+      "name": "Audio"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Mateo Cardenas",
+      "email": "mateo@admin.com",
+      "role": "admin",
+      "status": "active",
+      "age": 20,
+      "country": "Colombia",
+      "permissions": [
+        "create",
+        "edit",
+        "delete",
+        "view"
+      ],
+      "createdAt": "2024-01-10",
+      "lastLogin": "2026-01-22"
+    },
+    {
+      "id": "2",
+      "name": "Invitado",
+      "email": "guest@demo.com",
+      "role": "user",
+      "status": "active",
+      "age": 18,
+      "country": "Colombia",
+      "permissions": [
+        "view"
+      ],
+      "createdAt": "2024-03-02",
+      "lastLogin": "2026-01-20"
+    },
+    {
+      "id": "3",
+      "name": "Laura Gómez",
+      "email": "laura@gomez.com",
+      "role": "editor",
+      "status": "active",
+      "age": 24,
+      "country": "México",
+      "permissions": [
+        "edit",
+        "view"
+      ],
+      "createdAt": "2024-06-15",
+      "lastLogin": "2026-01-18"
+    },
+    {
+      "id": "4",
+      "name": "Carlos Pérez",
+      "email": "carlos@empresa.com",
+      "role": "moderator",
+      "status": "inactive",
+      "age": 30,
+      "country": "Argentina",
+      "permissions": [
+        "delete",
+        "view"
+      ],
+      "createdAt": "2023-11-01",
+      "lastLogin": "2025-12-10"
+    },
+    {
+      "id": "5",
+      "name": "Sofía Ramírez",
+      "email": "sofia@ramirez.com",
+      "role": "user",
+      "status": "banned",
+      "age": 22,
+      "country": "Chile",
+      "permissions": [
+        "view"
+      ],
+      "createdAt": "2024-08-21",
+      "lastLogin": "2025-09-05"
+    },
+    {
+      "id": "6",
+      "name": "Andrés Torres",
+      "email": "andres@torres.dev",
+      "role": "developer",
+      "status": "active",
+      "age": 27,
+      "country": "Perú",
+      "permissions": [
+        "create",
+        "edit",
+        "view"
+      ],
+      "createdAt": "2024-02-14",
+      "lastLogin": "2026-01-23"
+    },
+    {
+      "id": "a5d8",
+      "name": "mateo",
+      "email": "mcotero1226@gmail.com",
+      "role": "admin",
+      "status": "active",
+      "age": 18,
+      "country": "Colombia"
+    },
+    {
+      "id": "f50f",
+      "name": "estiven cardeasna",
+      "email": "asdasd@dasd",
+      "role": "user",
+      "status": "active",
+      "age": 67,
+      "country": "Colombia"
+    }
+  ],
+  "events": [
+    {
+      "id": "ev-001",
+      "title": "Torneo de FIFA (La revancha)",
+      "organizer": "Mateo Cardenas",
+      "location": "Casa de Mateo",
+      "date": "2026-02-15",
+      "maxParticipants": 8,
+      "entryFee": 5000,
+      "status": "confirmed",
+      "description": "El que pierda paga las pizzas.",
+      "imagen": "/public/image/foto1.avif",
+      "contact": {
+        "phone": "+57 3001234567",
+        "email": "mateocardenas.dev@gmail.com"
+      },
+      "eventDetails": {
+        "minimumAge": "Todas las edades",
+        "accommodation": "Fijo",
+        "capacity": 20,
+        "foodSale": true,
+        "liquorSale": false,
+        "accessible": true,
+        "pregnantAccess": true,
+        "responsible": "Mateo Cardenas"
+      },
+      "schedule": {
+        "date": "2026-02-15",
+        "startTime": "19:00",
+        "endTime": "23:00"
+      },
+      "pricing": {
+        "entryFee": 5000,
+        "currency": "COP"
+      }
+    },
+    {
+      "id": "ev-002",
+      "title": "Picadito de Fútbol 5",
+      "organizer": "Estiven Cárdenas",
+      "date": "2026-02-18",
+      "maxParticipants": 10,
+      "entryFee": 12000,
+      "status": "pending",
+      "description": "Sin traer troncos, por favor.",
+      "imagen": "/public/image/foto2.jpg",
+      "contact": {
+        "phone": "+57 3001234567",
+        "email": "mateocardenas.dev@gmail.com"
+      },
+      "schedule": {
+        "date": "2026-02-10",
+        "startTime": "19:00",
+        "endTime": "23:00"
+      },
+      "pricing": {
+        "entryFee": 0,
+        "currency": "COP"
+      },
+      "eventDetails": {
+        "minimumAge": "Todas las edades",
+        "accommodation": "Fijo",
+        "capacity": 20,
+        "foodSale": true,
+        "liquorSale": false,
+        "accessible": true,
+        "pregnantAccess": true,
+        "responsible": "Mateo Cardenas"
+      }
+    },
+    {
+      "id": "ev-003",
+      "title": "Noche de Karaoke",
+      "organizer": "Manuela Lopez",
+      "location": "Bar Central",
+      "date": "2026-02-20",
+      "maxParticipants": 20,
+      "entryFee": 0,
+      "status": "confirmed",
+      "description": "Prohibido cantar canciones de despecho después de las 12.",
+      "imagen": "/public/image/foto3.jpg"
+    },
+    {
+      "id": "ev-004",
+      "title": "Rodada Nocturna (Bicis)",
+      "organizer": "Daniel Hernandes",
+      "location": "Parque Principal",
+      "date": "2026-02-22",
+      "maxParticipants": 15,
+      "entryFee": 0,
+      "status": "active",
+      "description": "Traer casco y buena energía.",
+      "imagen": "/public/image/foto4.jpg"
+    },
+    {
+      "id": "ev-005",
+      "title": "Clase de Programación React",
+      "organizer": "Andrés Torres",
+      "location": "Google Meet",
+      "date": "2026-02-25",
+      "maxParticipants": 50,
+      "entryFee": 0,
+      "status": "confirmed",
+      "description": "Aprendiendo a no romper el código."
+    },
+    {
+      "id": "ev-006",
+      "title": "Asado Familiar",
+      "organizer": "Laura Gómez",
+      "location": "Finca La Linda",
+      "date": "2026-03-01",
+      "maxParticipants": 30,
+      "entryFee": 25000,
+      "status": "active",
+      "description": "Incluye carne, yuca y aguacate."
+    },
+    {
+      "id": "ev-007",
+      "title": "Sesión de Fotos para IG",
+      "organizer": "Mateo Cardenas",
+      "location": "Centro Histórico",
+      "date": "2026-03-05",
+      "maxParticipants": 5,
+      "entryFee": 0,
+      "status": "pending",
+      "description": "Para actualizar el perfil con estilo."
+    },
+    {
+      "id": "ev-008",
+      "title": "Torneo de Valorant",
+      "organizer": "Estiven Cárdenas",
+      "location": "Discord Server",
+      "date": "2026-03-10",
+      "maxParticipants": 10,
+      "entryFee": 10000,
+      "status": "confirmed",
+      "description": "Premio para el MVP."
+    },
+    {
+      "id": "ev-009",
+      "title": "Salida a Cine (Estreno)",
+      "organizer": "Sofía Ramírez",
+      "location": "CineColombia",
+      "date": "2026-03-12",
+      "maxParticipants": 6,
+      "entryFee": 18000,
+      "status": "active",
+      "description": "Compramos las boletas por preventa."
+    },
+    {
+      "id": "ev-010",
+      "title": "Intercambio de Libros",
+      "organizer": "Carlos Pérez",
+      "location": "Biblioteca Pública",
+      "date": "2026-03-15",
+      "maxParticipants": 12,
+      "entryFee": 0,
+      "status": "cancelled",
+      "description": "Se cancela porque nadie lee JAJA."
+    }
+  ],
+  "notifications": [],
+  "calls": [
+    {
+      "id": "1",
+      "name": "Carlos Ramirez",
+      "phone": "+57 3001234567",
+      "type": "incoming",
+      "duration": "02:35",
+      "date": "2026-03-05",
+      "time": "09:15"
+    },
+    {
+      "id": "4",
+      "name": "Maria Lopez",
+      "phone": "+57 3016549870",
+      "type": "incoming",
+      "duration": "03:47",
+      "date": "2026-03-04",
+      "time": "14:05"
+    },
+    {
+      "id": "5",
+      "name": "Andres Castillo",
+      "phone": "+57 3127412589",
+      "type": "outgoing",
+      "duration": "07:12",
+      "date": "2026-03-03",
+      "time": "20:11"
+    }
+  ]
+}
