@@ -56,10 +56,6 @@ const Notificaciones = () => {
   }
 
   const { data, isLoading, error } = useNotificaciones()
-
-
-
-
   const queryClient = useQueryClient()
 
   const deletenotificaciones = async (id: number) => {

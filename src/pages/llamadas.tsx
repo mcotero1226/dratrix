@@ -41,7 +41,7 @@ const Llamadas = () => {
     <div className="min-h-screen bg-gray-100 p-10">
 
       <h1 className="text-3xl font-bold mb-8 text-center">
-        Historial de llamadas
+        Historial de llamaditas
       </h1>
 
       <div className="grid md:grid-cols-3 gap-6">

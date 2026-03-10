@@ -70,7 +70,7 @@ const EventsPage = () => {
                 {event.location || "Medellín, ANT"}
               </span>
               <Button type="primary">
-                <Link to={`/events/${event.id}`}>ver</Link>
+                <Link to={`/events/${event.id}`}>Ver eventos</Link>
               </Button>
             </Card>
           </Col>
