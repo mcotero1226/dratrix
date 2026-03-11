@@ -166,6 +166,24 @@
       "status": "active",
       "age": 67,
       "country": "Colombia"
+    },
+    {
+      "id": "e448",
+      "name": "mateo",
+      "email": "cardenaso@ASDAD",
+      "role": "user",
+      "status": "active",
+      "age": 17,
+      "country": "Colombia"
+    },
+    {
+      "id": "02ff",
+      "name": "mateo",
+      "email": "cardenaso@ASDAD",
+      "role": "user",
+      "status": "inactive",
+      "age": 79,
+      "country": "Colombia"
     }
   ],
   "events": [

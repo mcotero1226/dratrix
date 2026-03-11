@@ -58,10 +58,15 @@ const Login = () => {
 
     return (
         <>
-            {contextHolder}
+        
+            <h1>{contextHolder}</h1>
+            <div className="shadow-lg p-6 bg-white rounded-xl">
+                <h1 className="text-center font-black text-4xl">INGRESAR</h1>
+            </div>
+
 
             <Card
-                title="Crear usuario"
+
                 style={{
                     maxWidth: 420,
                     margin: "60px auto",
@@ -113,6 +118,7 @@ const Login = () => {
                                 <Select {...field} placeholder="Selecciona rol">
                                     <Select.Option value="admin">Admin</Select.Option>
                                     <Select.Option value="user">User</Select.Option>
+                                    <Select.Option value="Moderador">Moderador</Select.Option>
                                 </Select>
                             )}
                         />
@@ -179,7 +185,7 @@ const Login = () => {
                         block
                         style={{ borderRadius: 10 }}
                     >
-                        Crear usuario
+                        Ingresar
                     </Button>
                 </Form>
             </Card>

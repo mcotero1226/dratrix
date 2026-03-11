@@ -25,8 +25,6 @@ const AppRouter = () => {
           <Route path="users/:id" element={<ChatDetail />} />
           <Route path="events/:id" element={<EventsId />} />
           <Route path="llamadas" element={<Llamadas />} />
-
-
         </Route>
       </Routes>
     </BrowserRouter>
