@@ -1,26 +1,34 @@
 import { useQuery } from "@tanstack/react-query"
-import { Card, Typography, Row, Col, Button } from "antd"
-import { Link } from "react-router-dom"
+import { Card, Typography, Row, Col, Button, Flex, Spin } from "antd"
+import { Link } from "react-router-dom";
+import { LoadingOutlined } from '@ant-design/icons';
 
 const { Title, Paragraph } = Typography
+
 
 const EventsPage = () => {
   const dataEvents = async () => {
     const res = await fetch("http://localhost:3001/events")
     if (!res.ok) throw new Error("Error al obtener eventos")
     return res.json()
+
   }
+
 
   const { data: events, isLoading, error } = useQuery({
     queryKey: ["events"],
     queryFn: dataEvents,
+    refetchInterval: 9000
   })
+
+
+
 
   if (isLoading)
     return (
-      <div className="flex justify-center mt-20">
-        <p className="text-lg">Cargando eventos...</p>
-      </div>
+      <Flex align="center" gap="medium">
+        <Spin indicator={<LoadingOutlined spin />} size="small" />
+      </Flex>
     )
 
   if (error instanceof Error)
