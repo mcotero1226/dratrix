@@ -148,9 +148,9 @@ const MainPage: React.FC = () => {
 
                 <main className="flex-1 p-6">
                     <div className="flex justify-between items-center mb-6">
-                        <h1 className="text-3xl font-black">Personas </h1>
+                        <h1 className="text-3xl font-black text-center">users</h1>
                         <Button type="primary" onClick={() => showModal()}>
-                            Crear producto
+                           Añadir una nueva Persona
                         </Button>
                         <Menu className="rounded-t-3xl"
                             onClick={onClick}
