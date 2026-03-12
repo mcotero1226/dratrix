@@ -4,11 +4,34 @@ import { useDataChat } from "../hooks/usedatausersApi";
 import type { UserType } from "../pages/user-page";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { ButtonModal } from "../components/buttton-modal";
+import { ModalFrom } from "../components/modal-form";
+import { useForm } from "react-hook-form";
+
+
 
 const { Sider } = Layout;
 const { Title } = Typography;
 
 const Chat = () => {
+  const { register, handleSubmit, formState: { errors }, reset, trigger } =
+    useForm();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
+
+
   const { isLoading, contactos, error } = useDataChat();
   const [busqueda, setBusqueda] = useState("");
 
@@ -31,6 +54,7 @@ const Chat = () => {
 
   if (error) return <Empty description="Error al cargar contactos" />;
 
+
   return (
     <Layout style={{ height: "100vh", background: "#f0f2f5" }}>
       <Sider
@@ -41,6 +65,21 @@ const Chat = () => {
           borderRight: "1px solid #f0f0f0",
         }}
       >
+        <ButtonModal
+          type={'primary'}
+          title={'Añadir'}
+          onClick={() => showModal()}
+        />
+
+        <ModalFrom
+          open={isModalOpen}
+          onOk={handleSubmit(handleOk)}
+          onCancel={handleCancel}
+          register={register}
+          errors={errors}
+          trigger={trigger}
+        />
+
         <Title level={4}>Contactos</Title>
 
         <Input

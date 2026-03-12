@@ -60,7 +60,7 @@ const Login = () => {
         <>
         
             <h1>{contextHolder}</h1>
-            <div className="shadow-lg p-6 bg-white rounded-xl">
+            <div className="shadow-lg p-6    bg-white rounded-xl">
                 <h1 className="text-center font-black text-4xl">INGRESAR</h1>
             </div>
 
