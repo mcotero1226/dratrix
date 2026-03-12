@@ -56,7 +56,7 @@ const Chat = () => {
 
 
   return (
-    <Layout style={{ height: "100vh", background: "#f0f2f5" }}>
+    <Layout style={{ height: "100vh", background: "#f0f2f5 " }}>
       <Sider
         width={300}
         style={{
@@ -65,11 +65,16 @@ const Chat = () => {
           borderRight: "1px solid #f0f0f0",
         }}
       >
-        <ButtonModal
-          type={'primary'}
-          title={'Añadir'}
-          onClick={() => showModal()}
-        />
+        <div className="flex gap-4 p-5">
+
+          <ButtonModal
+            type={'primary'}
+            title={'Añadir'}
+            onClick={() => showModal()}
+          />
+        <Title level={4}>Contactos</Title>
+
+        </div>
 
         <ModalFrom
           open={isModalOpen}
@@ -80,7 +85,6 @@ const Chat = () => {
           trigger={trigger}
         />
 
-        <Title level={4}>Contactos</Title>
 
         <Input
           prefix={<SearchOutlined />}
