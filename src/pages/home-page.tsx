@@ -14,6 +14,7 @@ import { UserOutlined, SearchOutlined } from '@ant-design/icons';
 import { App, Input } from 'antd';
 import type { MenuProps } from 'antd';
 import { Menu } from 'antd';
+import { ButtonModal } from "../components/buttton-modal";
 
 const { Meta } = Card;
 
@@ -55,10 +56,6 @@ const items: MenuItem[] = [
     },
 
 ];
-
-
-
-
 const MainPage: React.FC = () => {
 
 
@@ -149,9 +146,9 @@ const MainPage: React.FC = () => {
                 <main className="flex-1 p-6">
                     <div className="flex justify-between items-center mb-6">
                         <h1 className="text-3xl font-black text-center">users</h1>
-                        <Button type="primary" onClick={() => showModal()}>
-                           Añadir una nueva Persona
-                        </Button>
+                        <ButtonModal type={'primary'} onClick={() => showModal()}>
+                            Añadir una nueva Persona
+                        </ButtonModal>
                         <Menu className="rounded-t-3xl"
                             onClick={onClick}
                             items={items}
@@ -192,7 +189,7 @@ const MainPage: React.FC = () => {
                                             src={`https://api.dicebear.com/7.x/miniavs/svg?seed=${product.id}`}
                                         />
                                     }
-                                     className='font-medium' title={product.name}
+                                    className='font-medium' title={product.name}
                                     description={product.description}
                                 />
                             </Card>

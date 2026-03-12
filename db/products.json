@@ -184,6 +184,15 @@
       "status": "inactive",
       "age": 79,
       "country": "Colombia"
+    },
+    {
+      "id": "fce3",
+      "name": "mateo",
+      "email": "cardenaso@ASDAD",
+      "role": "Moderador",
+      "status": "inactive",
+      "age": 56,
+      "country": "Colombia"
     }
   ],
   "events": [

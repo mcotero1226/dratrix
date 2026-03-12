@@ -33,7 +33,6 @@ const ModalFrom: React.FC = ({ open, onOk, onCancel, register, errors }: any) =>
                 footer={null}
                 centered
                 width={420}
-
             >
                 <Steps current={current} items={items} />
                 {current === 0 && (
