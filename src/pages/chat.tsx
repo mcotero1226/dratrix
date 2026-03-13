@@ -7,6 +7,8 @@ import { useState } from "react";
 import { ButtonModal } from "../components/buttton-modal";
 import { ModalFrom } from "../components/modal-form";
 import { useForm } from "react-hook-form";
+import { usePostChat } from "../hooks/usepostcahat"
+
 
 
 
@@ -17,13 +19,17 @@ const Chat = () => {
   const { register, handleSubmit, formState: { errors }, reset, trigger } =
     useForm();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { mutate: createPersona } = usePostChat()
 
   const showModal = () => {
     setIsModalOpen(true);
   };
 
-  const handleOk = () => {
+  const onSubmit = (data: UserType) => {
     setIsModalOpen(false);
+    createPersona(data)
+    console.log(data)
+    reset()
   };
 
   const handleCancel = () => {
@@ -72,17 +78,20 @@ const Chat = () => {
             title={'Añadir'}
             onClick={() => showModal()}
           />
-        <Title level={4}>Contactos</Title>
+          <Title level={4}>Contactos</Title>
 
         </div>
 
         <ModalFrom
           open={isModalOpen}
-          onOk={handleSubmit(handleOk)}
+          onOk={handleSubmit(onSubmit)}
           onCancel={handleCancel}
           register={register}
           errors={errors}
           trigger={trigger}
+          nombre={'Nombre del nuevo contacto'}
+          contacto={'number'}
+
         />
 
 

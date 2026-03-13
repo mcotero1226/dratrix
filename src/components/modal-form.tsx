@@ -11,7 +11,7 @@ const steps = [
     },
 ]
 
-const ModalFrom: React.FC = ({ open, onOk, onCancel, register, errors }: any) => {
+const ModalFrom: React.FC = ({ open, onOk, onCancel, register, errors,nombre,contacto }: any) => {
     const [current, setCurrent] = useState(0);
 
     const next = () => {
@@ -44,7 +44,7 @@ const ModalFrom: React.FC = ({ open, onOk, onCancel, register, errors }: any) =>
 
                         <div className="mb-4">
                             <label className="block text-sm font-semibold text-gray-600 mb-1">
-                                Nombre
+                                {nombre}
                             </label>
                             <input
                                 {...register("name", { required: true })}
@@ -77,7 +77,7 @@ const ModalFrom: React.FC = ({ open, onOk, onCancel, register, errors }: any) =>
                                 <p className="text-red-500 text-xs mt-1">La URL de ig es obligatoria</p>
                             )}
                             <label className="block text-sm font-semibold text-gray-600 mb-1">
-                                ig
+                                {contacto}
                             </label>
                             <input
                                 {...register("ig", {

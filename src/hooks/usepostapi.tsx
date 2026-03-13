@@ -5,13 +5,13 @@ const usePostApi = () => {
     const queryClient = useQueryClient();
 
     return useMutation({
-        mutationFn: async (data: Product) => {
+        mutationFn: async (dataProduct: Product) => {
             const res = await fetch(`http://localhost:3001/products`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(data),
+                body: JSON.stringify(dataProduct),
             });
 
             if (!res.ok) throw new Error("Error al actualizar producto");
