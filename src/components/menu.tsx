@@ -52,7 +52,7 @@ const items: MenuItem[] = [
                 label: 'start',
                 children: [
                     {
-                        key: 'events',
+                        key: 'start',
                         label: <Link to="/">start
                         </Link>,
                         icon: <BookOutlined />,
@@ -82,7 +82,7 @@ const items: MenuItem[] = [
             },
             {
                 key:
-                    'option-10',
+                    'option-11',
                 label: <Link to={'llamadas'}>llamadas</Link>,
                 icon: <PhoneOutlined />
             },

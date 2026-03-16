@@ -6,7 +6,7 @@ export type UserType = {
   email: string;
 };
 
-export const useUserById = (id: number | undefined) => {
+export const  useUserById = (id: number | undefined) => {
   return useQuery<UserType, Error>({
     queryKey: ["users", id],
     queryFn: async () => {

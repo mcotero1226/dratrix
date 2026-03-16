@@ -146,14 +146,16 @@ const MainPage: React.FC = () => {
                 <main className="flex-1 p-6">
                     <div className="flex justify-between items-center mb-6">
                         <h1 className="text-3xl font-black text-center">users</h1>
+                        <div className="-mt-10">
                         <ButtonModal type={'primary'} onClick={() => showModal()} title={'Añadir Users'}/>
-                           
+                         </div>  
                         <Menu className="rounded-t-3xl"
                             onClick={onClick}
                             items={items}
                         />
 
                     </div>
+                  
                     <ModalFrom
                         open={isModalOpen}
                         onOk={handleSubmit(onSubmit)}

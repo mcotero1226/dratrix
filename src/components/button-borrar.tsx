@@ -2,7 +2,7 @@
 import { Button } from "antd"
 const MyButton = (props: any) => {
 
-    return <Button className="mt-52" type={props.text} onClick={props.onClick}>{props.significado}</Button>
+    return <Button className="mt-52" color={props.text} onClick={props.onClick} icon={props.icon}>{props.significado}</Button>
 
     
 }
