@@ -7,7 +7,7 @@ import { Layaut } from "../components/layaut";
 import { AvatarUser } from "../pages/avatar-users";
 import { Chat } from "../pages/chat";
 import { Notificaciones } from "../pages/notificaciones";
-import { ChatDetail } from "../components/ChatDetail";
+import { ChatDetail } from "../pages/ChatDetail";
 import { EventsId } from "../pages/events-id";
 import { Llamadas } from "../pages/llamadas";
 const AppRouter = () => {

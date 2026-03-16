@@ -6,7 +6,7 @@ type LoadingProps = {
   size?: "small" | "default" | "large";
 };
 
-const Loading: React.FC<LoadingProps> = ({ message = "Cargando...", size = "large" }) => {
+const Loading: React.FC<LoadingProps> = ({ message = "Cargando..."}) => {
   return (
     <div
       style={{
@@ -17,7 +17,7 @@ const Loading: React.FC<LoadingProps> = ({ message = "Cargando...", size = "larg
         flexDirection: "column",
       }}
     >
-      <Spin size={size} tip={message} />
+      <Spin  tip={message} />
     </div>
   );
 };

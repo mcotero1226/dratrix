@@ -13,13 +13,13 @@ export type UserType = {
     id: number;
     name: string;
     role: string;
-    
-    
+
+
 };
 
 const UserPage: React.FC = () => {
     const [open, setOpen] = useState(false);
-   
+
 
     const showDrawer = () => {
         setOpen(true);
@@ -76,17 +76,15 @@ const UserPage: React.FC = () => {
 
             </div>
 
-                <Drawer
+            <Drawer
                 title={
                     <h2 className="text-lg font-semibold">
                         Usuarios registrados
                     </h2>
                 }
                 placement="right"
-                width={380}
                 onClose={onClose}
                 open={open}
-                bodyStyle={{ padding: 0 }}
             >
                 <div className="divide-y">
                     {users?.map((user) => (
