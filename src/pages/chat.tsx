@@ -41,9 +41,10 @@ const Chat = () => {
   const { isLoading, contactos, error } = useDataChat();
   const [busqueda, setBusqueda] = useState("");
 
-  const resultados = contactos?.filter((item) =>
-    item.name.toLowerCase().includes(busqueda.toLowerCase())
-  );
+  const resultados = contactos?.filter((item) => {
+    if (!item.name) return false;
+    return item.name.toLowerCase().includes(busqueda.toLowerCase());
+  });
 
   if (isLoading)
     return (

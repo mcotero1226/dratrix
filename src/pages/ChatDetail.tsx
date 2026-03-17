@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import { MyButton } from "../components/button-borrar";
 import { useChatDelet } from "../hooks/usechatdelet";
 import { DeleteOutlined } from "@ant-design/icons";
+import { PhoneOutlined } from "@ant-design/icons";
+import { usePostLlamadas } from "../hooks/usepostllamadas";
 
 const { Header, Content, Footer } = Layout;
 const { Title } = Typography;
@@ -14,6 +16,7 @@ const ChatDetail = () => {
   const { id } = useParams<{ id: string }>();
   const { data: user, isLoading, error } = useUserById(id);
   const { mutate: deleteChat } = useChatDelet();
+  const { mutate: postLlamadas } = usePostLlamadas()
 
   const [variable, setVariable] = useState("");
   const [mensajes, setMensajes] = useState<string[]>(() => {
@@ -45,6 +48,7 @@ const ChatDetail = () => {
       </div>
     );
 
+
   return (
     <Layout className="h-screen flex flex-col bg-slate-100">
 
@@ -60,7 +64,7 @@ const ChatDetail = () => {
           />
 
           <div className="flex flex-col leading-tight">
-            <Title level={4} className="!text-white !m-0">
+            <Title level={4} >
               {user?.name}
             </Title>
 
@@ -71,12 +75,24 @@ const ChatDetail = () => {
           </div>
 
         </div>
-        <div className="flex justify-end -mt-50">
+        <div className="flex justify-end -mt-50 gap-10">
           <MyButton
             icon={<DeleteOutlined />}
             text={"danger"}
             significado={"Borrar users"}
-            onClick={() => deleteChat(user?.id)}
+            onClick={() => {
+              if (!user?.id) return
+              deleteChat(user?.id)
+            }}
+          />
+          <MyButton
+            icon={<PhoneOutlined />}
+            text={"primary"}
+            significado={"Llamar"}
+            onClick={() => {
+              if (!user) return;
+              postLlamadas(user);
+            }}
           />
         </div>
 
@@ -107,7 +123,6 @@ const ChatDetail = () => {
                 shadow
                 max-w-xs
                 text-sm
-                break-words
                 hover:scale-[1.02]
                 transition
                 duration-200

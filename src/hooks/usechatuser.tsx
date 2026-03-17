@@ -1,12 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 
 export type UserType = {
-  id: number;
+  id: number | string;
   name: string;
-  email: string;
+  email?: string;
+  phone?: string;
 };
 
-export const  useUserById = (id: number | undefined) => {
+export const useUserById = (id: number | undefined) => {
   return useQuery<UserType, Error>({
     queryKey: ["users", id],
     queryFn: async () => {
@@ -14,6 +15,6 @@ export const  useUserById = (id: number | undefined) => {
       if (!res.ok) throw new Error("Error al obtener usuario");
       return res.json();
     },
-    enabled: !!id, 
+    enabled: !!id,
   });
 };

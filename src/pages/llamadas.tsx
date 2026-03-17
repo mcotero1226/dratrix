@@ -63,7 +63,7 @@ const Llamadas = () => {
 
             </div>
 
-            <div className="flex justify-between mt-[-110px] items-center">
+            <div className="flex justify-between mt-[-111px] items-center">
               <Tag color="blue" icon={<PhoneOutlined />}>
                 {i.type}
               </Tag>
@@ -71,11 +71,15 @@ const Llamadas = () => {
               <span className="text-gray-400 text-sm">
                 {i.duration}
               </span>
+              <div >
+
               <MyButton
                 text="primary"
                 significado="borrar"
                 onClick={() => mutation.mutate(i.id)}
               />
+              </div>
+
 
             </div>
 
